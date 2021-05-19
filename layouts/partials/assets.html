@@ -192,6 +192,12 @@
 {{- dict "Source" "js/theme.min.js" "Fingerprint" $fingerprint | dict "Scratch" .Scratch "Data" | partial "scratch/script.html" -}}
 {{- $_ := (resources.Get "js/theme.min.js.map").RelPermalink -}}
 
+{{- /* asciinema Player */ -}}
+{{- $source := $cdn.asciinemaPlayerCSS | default "lib/asciinema-player/asciinema-player.css" -}}
+{{- dict "Source" $source "Fingerprint" $fingerprint | dict "Scratch" .Scratch "Data" | partial "scratch/style.html" -}}
+{{- $source := $cdn.asciinemaPlayerJS | default "lib/asciinema-player/asciinema-player.js" -}}
+{{- dict "Source" $source "Fingerprint" $fingerprint | dict "Scratch" .Scratch "Data" | partial "scratch/script.html" -}}
+
 {{- with (.Scratch.Get "this").scriptArr -}}
     {{- delimit . "\n" | dict "Content" | dict "Scratch" $.Scratch "Data" | partial "scratch/script.html" -}}
 {{- end -}}

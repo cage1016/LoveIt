@@ -38,6 +38,10 @@ code, pre, .highlight table, .highlight tr, .highlight td {
   }
 }
 
+pre.asciinema-terminal {
+  background-color: #121314;
+}
+
 .highlight, .gist {
   font-family: $code-font-family;
   font-size: $code-font-size;

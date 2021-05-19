@@ -64,3 +64,6 @@ libFiles:
   # cookieconsent@3.1.1 https://github.com/osano/cookieconsent
   cookieconsentCSS: cookieconsent@3.1.1/build/cookieconsent.min.css
   cookieconsentJS: cookieconsent@3.1.1/build/cookieconsent.min.js
+  # asciinema-player@2.6.1 https://github.com/asciinema/asciinema-player
+  asciinemaPlayerCSS: asciinema-player@2.6.1/asciinema-player.css
+  asciinemaPlayerJS: asciinema-player@2.6.1/asciinema-player.js
